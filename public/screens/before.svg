@@ -1,0 +1,7 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#2a2a3e"/>
+  <rect x="100" y="100" width="1000" height="600" fill="#1a1a2e" stroke="#D5A04C" stroke-width="2"/>
+  <text x="50%" y="45%" font-family="Arial, sans-serif" font-size="36" fill="#D5A04C" text-anchor="middle" font-weight="bold">AVANT Refonte</text>
+  <text x="50%" y="52%" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle">Site ancien - Lent - Non responsive</text>
+  <text x="50%" y="58%" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Replace with before.webp (1200x800)</text>
+</svg>

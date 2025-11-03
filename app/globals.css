@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Reset & Base Styles */
+@layer base {
+  :root {
+    --font-inter: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-base text-white antialiased;
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Button variants */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-base bg-gold hover:bg-lightgold transition-colors duration-300 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-gold border-2 border-gold hover:bg-gold hover:text-base transition-all duration-300 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+  }
+
+  /* Card component */
+  .card {
+    @apply bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-gold/30 transition-all duration-500;
+  }
+
+  /* Input styles */
+  .input {
+    @apply w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:border-accent focus:ring-1 focus:ring-accent transition-colors duration-200;
+  }
+
+  .textarea {
+    @apply w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:border-accent focus:ring-1 focus:ring-accent transition-colors duration-200 resize-none;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply py-16 md:py-24;
+  }
+}
+
+/* Global beautiful scrollbar styling */
+@layer base {
+  /* Firefox */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #D5A04C transparent; /* thumb track */
+  }
+
+  /* WebKit-based browsers */
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #E4BB6C, #D5A04C);
+    border-radius: 9999px;
+    border: 2px solid #0D1624; /* match base background */
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #FFD88A, #E4BB6C);
+  }
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  @media (max-width: 640px) {
+    *::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    *::-webkit-scrollbar-thumb {
+      border-width: 1px;
+    }
+  }
+}
+
+@layer utilities {
+  /* Text gradients */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold to-lightgold bg-clip-text text-transparent;
+  }
+
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent;
+  }
+
+  /* Animations */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300 hover:shadow-lg hover:shadow-gold/20;
+  }
+
+  /* Optional slimmer scrollbar utility for nested scroll areas */
+  .scrollbar-slim {
+    scrollbar-width: thin;
+  }
+  .scrollbar-slim::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+}

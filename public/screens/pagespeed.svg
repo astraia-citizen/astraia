@@ -1,0 +1,16 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0D1624"/>
+  <rect x="50" y="50" width="1100" height="700" fill="#1a2332" stroke="#D5A04C" stroke-width="2" rx="8"/>
+  
+  <!-- Fake PageSpeed gauge -->
+  <circle cx="300" cy="300" r="120" fill="none" stroke="#333" stroke-width="20"/>
+  <circle cx="300" cy="300" r="120" fill="none" stroke="#4BA3F0" stroke-width="20" stroke-dasharray="565" stroke-dashoffset="141" transform="rotate(-90 300 300)"/>
+  <text x="300" y="310" font-family="Arial, sans-serif" font-size="72" fill="#4BA3F0" text-anchor="middle" font-weight="bold">94</text>
+  
+  <text x="300" y="450" font-family="Arial, sans-serif" font-size="24" fill="#D5A04C" text-anchor="middle" font-weight="bold">Performance</text>
+  
+  <text x="700" y="200" font-family="Arial, sans-serif" font-size="32" fill="#fff" text-anchor="start" font-weight="bold">PageSpeed Insights</text>
+  <text x="700" y="250" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="start">Mobile Score</text>
+  
+  <text x="600" y="600" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Replace with pagespeed.webp screenshot</text>
+</svg>

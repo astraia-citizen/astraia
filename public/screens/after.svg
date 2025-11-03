@@ -1,0 +1,13 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1624;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2332;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grad2)"/>
+  <rect x="100" y="100" width="1000" height="600" fill="#1a2332" stroke="#4BA3F0" stroke-width="3" rx="8"/>
+  <text x="50%" y="45%" font-family="Arial, sans-serif" font-size="36" fill="#4BA3F0" text-anchor="middle" font-weight="bold">APRÈS Refonte</text>
+  <text x="50%" y="52%" font-family="Arial, sans-serif" font-size="18" fill="#D5A04C" text-anchor="middle">Moderne - Rapide - Responsive</text>
+  <text x="50%" y="58%" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Replace with after.webp (1200x800)</text>
+</svg>
