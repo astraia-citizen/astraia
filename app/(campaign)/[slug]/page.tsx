@@ -8,9 +8,7 @@ import FooterBare from '@/components/FooterBare';
 import { generateMetadata as genMeta, getSiteUrl } from '@/lib/seo';
 
 interface CampaignPageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 }
 
 // Campaign-specific headlines
@@ -23,12 +21,13 @@ const CAMPAIGN_HEADLINES: Record<string, string> = {
 
 export async function generateMetadata({ params }: CampaignPageProps): Promise<Metadata> {
   const siteUrl = getSiteUrl();
-  const headline = CAMPAIGN_HEADLINES[params.slug] || 'Générez plus de demandes locales';
+  const { slug } = await params;
+  const headline = CAMPAIGN_HEADLINES[slug] || 'Générez plus de demandes locales';
 
   return genMeta({
     title: `${headline} - Astraia`,
     description: 'Refontes orientées SEO et conversion. Sites rapides, mobile-first, avec mise en ligne sans friction.',
-    url: `${siteUrl}/${params.slug}`,
+    url: `${siteUrl}/${slug}`,
     noindex: true, // Campaign pages not indexed
   });
 }
