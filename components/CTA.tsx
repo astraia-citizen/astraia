@@ -235,7 +235,7 @@ export default function CTA() {
                       setFormData({ ...formData, siteUrl: normalized });
                     }
                   }}
-                  placeholder="axelproject.fr ou https://votresite.com"
+                  placeholder="https://votresite.com"
                   inputMode="url"
                 />
                 <p className="mt-1 text-xs text-white/60">Vous pouvez saisir un domaine simple, nous ajoutons https automatiquement.</p>

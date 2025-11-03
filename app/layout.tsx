@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { generateMetadata as genMeta, getSiteUrl } from '@/lib/seo';
 import SecretInteractions from '@/components/SecretInteractions';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,6 +19,15 @@ export const metadata: Metadata = {
     description: 'Refontes orientées SEO et conversion. Sites rapides, mobile-first, avec mise en ligne sans friction. +38% de formulaires en médiane.',
     url: siteUrl,
     image: `${siteUrl}/og-image.jpg`,
+    keywords: [
+      'refonte site web',
+      'création site vitrine',
+      'SEO local',
+      'optimisation conversion',
+      'Next.js',
+      'landing page',
+      'Astraia'
+    ],
   }),
   icons: {
     icon: [{ url: '/logos/astraia-icon.ico', type: 'image/x-icon' }],
@@ -45,6 +55,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className="min-h-screen flex flex-col">
         <SecretInteractions />
         {children}
+        {/* Vercel Speed Insights */}
+        <SpeedInsights />
       </body>
     </html>
   );

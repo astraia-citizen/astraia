@@ -10,6 +10,7 @@ export interface SeoConfig {
   url: string;
   image?: string;
   noindex?: boolean;
+  keywords?: string[];
 }
 
 /**
@@ -23,6 +24,7 @@ export function generateMetadata(config: SeoConfig): Metadata {
   const metadata: Metadata = {
     title: config.title,
     description: config.description,
+    keywords: config.keywords,
     metadataBase: new URL(config.url),
     alternates: {
       canonical: config.url,
